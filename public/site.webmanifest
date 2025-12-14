@@ -1,0 +1,25 @@
+{
+  "name": "BuildNest — Complete Web & App Solutions",
+  "short_name": "BuildNest",
+  "description": "Expert MERN Stack Developer specializing in SaaS applications, REST APIs, Admin Dashboards, and scalable web solutions",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0EA5E9",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}
+

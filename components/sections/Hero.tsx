@@ -19,11 +19,11 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-20 pb-6 md:pb-20 bg-white dark:bg-gray-900"
       style={{ backgroundColor: "white", minHeight: "100vh" }}
     >
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20"></div>
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-white dark:bg-gray-900"></div>
       
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-600/10 via-transparent to-primary-400/10"></div>
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-primary-50/30 dark:from-primary-900/10 dark:via-transparent dark:to-primary-900/10"></div>
 
       <div className="container mx-auto px-3 md:px-4 relative z-10" style={{ opacity: 1 }}>
         <div className="max-w-6xl mx-auto">

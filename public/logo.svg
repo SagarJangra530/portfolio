@@ -1,0 +1,18 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="32" fill="url(#gradient)"/>
+  <g transform="translate(64, 64)">
+    <path d="M32 48L64 32L96 48V80L64 96L32 80V48Z" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255,255,255,0.1)"/>
+    <path d="M32 48L64 64L96 48" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64 64V96" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="64" cy="48" r="8" fill="white"/>
+    <path d="M48 72L64 80L80 72" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  </g>
+  <text x="128" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">BuildNest</text>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>
+

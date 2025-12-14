@@ -10,16 +10,36 @@ export const metadata: Metadata = {
   description: "BuildNest — Complete Web & App Solutions. Expert MERN Stack Developer specializing in SaaS applications, REST APIs, Admin Dashboards, and scalable web solutions. Get a free quote today.",
   keywords: ["MERN Stack Developer", "Full Stack Developer", "SaaS Development", "Web Development", "React Developer", "Node.js Developer", "Freelance Developer"],
   authors: [{ name: "Sagar Jangra" }],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    apple: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "BuildNest — Complete Web & App Solutions | Expert MERN Developer",
     description: "BuildNest — Complete Web & App Solutions. Expert MERN Stack Developer ready to build your next project. Get a free quote today.",
     type: "website",
     locale: "en_US",
+    siteName: "BuildNest",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "BuildNest — Complete Web & App Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BuildNest — Complete Web & App Solutions",
     description: "Expert MERN Stack Development Services by BuildNest",
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,

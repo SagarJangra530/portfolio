@@ -133,7 +133,7 @@ export default function Pricing() {
         {/* Mobile: Horizontal Scroll, Desktop: Grid */}
         <div 
           ref={scrollRef}
-          className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto mb-12 overflow-x-auto md:overflow-x-visible pb-0 md:pb-0 scrollbar-hide snap-x snap-mandatory md:snap-none"
+          className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto mb-12 overflow-x-auto md:overflow-x-visible pb-0 md:pb-0 scrollbar-hide snap-x snap-mandatory md:snap-none md:items-stretch"
           style={{ 
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -147,7 +147,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1 }}
-              className="relative flex-shrink-0 w-[85vw] md:w-auto snap-center px-2"
+              className="relative flex-shrink-0 w-[85vw] md:w-auto snap-center px-2 md:flex md:flex-col"
             >
               {pkg.popular && (
                 <motion.div 
@@ -185,7 +185,7 @@ export default function Pricing() {
                   </p>
                 </div>
 
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="space-y-3 mb-6 flex-grow">
                   {pkg.features.map((feature) => (
                     <li
                       key={feature}
@@ -197,33 +197,42 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <motion.div
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
-                  transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-                  style={{ willChange: "transform", backfaceVisibility: "hidden" }}
-                  className={pkg.popular ? "mt-2" : ""}
-                >
-                  <Button
-                    onClick={scrollToContact}
-                    variant={pkg.popular ? "primary" : "outline"}
-                    className={`w-full font-semibold ${pkg.popular ? "shadow-lg" : ""}`}
-                  >
+                <div className="mt-auto pt-6 border-t border-gray-200 dark:border-gray-700">
+                  <div className="h-12 flex items-end">
+                    <motion.div
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                      transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+                      style={{ willChange: "transform", backfaceVisibility: "hidden" }}
+                      className="w-full"
+                    >
+                      <Button
+                        onClick={scrollToContact}
+                        variant={pkg.popular ? "primary" : "outline"}
+                        className="w-full font-semibold"
+                        size="md"
+                      >
+                        {pkg.popular ? (
+                          <>
+                            <Zap className="mr-2 w-4 h-4" />
+                            Get Started Now
+                          </>
+                        ) : (
+                          "Get Custom Quote"
+                        )}
+                      </Button>
+                    </motion.div>
+                  </div>
+                  <div className="h-6 mt-2 flex items-center justify-center">
                     {pkg.popular ? (
-                      <>
-                        <Zap className="mr-2 w-4 h-4" />
-                        Get Started Now
-                      </>
+                      <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+                        ⚡ Most clients choose this package
+                      </p>
                     ) : (
-                      "Get Custom Quote"
+                      <span className="text-xs text-transparent">Placeholder</span>
                     )}
-                  </Button>
-                </motion.div>
-                {pkg.popular && (
-                  <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2">
-                    ⚡ Most clients choose this package
-                  </p>
-                )}
+                  </div>
+                </div>
               </Card>
             </motion.div>
           ))}

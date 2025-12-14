@@ -35,7 +35,7 @@ export default function TrustBadges() {
   ];
 
   return (
-    <div className="py-6 md:py-8 bg-gradient-to-r from-primary-50 via-white to-primary-50 dark:from-gray-800/50 dark:via-gray-900 dark:to-gray-800/50 border-y border-gray-200 dark:border-gray-700">
+    <div className="py-6 md:py-8 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-700">
       <div className="container mx-auto px-4">
         {/* Mobile: Horizontal Scroll, Desktop: Grid */}
         <div 
